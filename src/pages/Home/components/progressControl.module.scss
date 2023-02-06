@@ -1,0 +1,59 @@
+.controlLine {
+	height: 1px;
+	width: 95%;
+	background-color: lightgray;
+	margin-bottom: 2rem;
+}
+
+.buttonWrap {
+	display: flex;
+	flex-direction: row nowrap;
+	justify-content: space-between;
+  align-items: center;
+	width: 95%;
+
+	.preLinkIcon {
+		vertical-align: middle;
+	}
+
+	.preLinkButton {
+		vertical-align: middle;
+		margin-left: 0.5rem;
+	}
+
+	// darkTheme
+	#darkPreButton {
+		color: white;
+	}
+
+	.button  {
+		border: 1px solid white;
+		background-color: rgb(224, 140, 140);
+		color: white;
+		padding: 10px;
+		border-radius: 5px;
+		cursor: pointer;
+		width: 9rem;
+		&:hover {
+			background-color: rgb(224, 95, 95);
+		}
+	}
+
+}
+
+@media (max-width: 576px) {
+	.controlLine {
+		width: 100%;
+	}
+
+	.buttonWrap {
+		width: 100%;
+	}
+	
+	.mobile {
+		padding-bottom: 2rem;
+		.mobileButton {
+			width: 100%;
+		}
+	}
+}

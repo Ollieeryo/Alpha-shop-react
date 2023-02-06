@@ -1,0 +1,90 @@
+// extend
+%input-style {
+  border: 1px solid lightgray;
+  padding: 1em;
+  border-radius: 5px;
+  &:hover,
+  &:focus {
+    border-color: darkgrey;
+  }
+}
+
+// darkTheme
+#darkInput {
+  background: black;
+  border-color: gray;
+  color: white;
+  &:hover,
+  &:focus {
+    border-color: white;
+  }
+}
+
+// step3
+.step3Title {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.formWrap {
+  width: 95%;
+  height: 350px;
+
+  .formRow {
+    display: grid;
+    grid-gap: 0.5rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    .input {
+      width: 61%;
+      @extend %input-style;
+    }
+
+    label {
+      color: gray;
+    }
+  }
+
+  .formRow2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .formRowCode {
+      width: 45%;
+      display: grid;
+      grid-gap: 0.5rem;
+    }
+
+    .input {
+      width: 90%;
+      @extend %input-style;
+    }
+
+    label {
+      color: gray;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .formWrap {
+    width: 92%;
+
+    .formRow {
+      width: 100%;
+      .input {
+        width: 100%;
+      }
+    }
+
+    .formRowCode {
+      width: 100%;
+
+      .input {
+        width: 100%;
+      }
+    }
+  }
+}

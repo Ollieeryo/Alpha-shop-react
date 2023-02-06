@@ -1,0 +1,186 @@
+// extend
+%input-style {
+  border: 1px solid lightgray;
+  padding: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    border-color: black;
+  }
+}
+
+%form-row-style {
+  display: grid;
+  grid-gap: 0.5rem;
+  color: gray;
+}
+
+.stepTitle {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.formWrap {
+  width: 95%;
+  height: 350px;
+
+  .formContainer {
+    width: 100%;
+
+    .selectMobile {
+      padding-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .inputMobile {
+      padding-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .formRow {
+      @extend %form-row-style;
+      width: 40%;
+
+      .selectWrap {
+        position: relative;
+        width: 80%;
+        z-index: 0;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 8px;
+          border-style: solid;
+          border-width: 6px 5px 0 5px;
+          border-color: black transparent transparent transparent;
+          z-index: -1;
+        }
+
+        .selectStyle {
+          appearance: none;
+          @extend %input-style;
+          width: 100%;
+          background: transparent;
+
+          &:invalid {
+            color: #747474;
+          }
+        }
+
+        .darkSelectStyle {
+          appearance: none;
+          @extend %input-style;
+          width: 100%;
+          background: transparent;
+          border-color: gray;
+          color: white;
+
+          &:hover,
+          &:focus {
+            border-color: white;
+          }
+          &:invalid {
+            color: #747474;
+          }
+          option {
+            background-color: black;
+          }
+        }
+      }
+    }
+
+    .formRowInput {
+      @extend %form-row-style;
+      width: 75%;
+
+      .inputStyle {
+        @extend %input-style;
+      }
+
+      // darkTheme
+      .darkInputStyle {
+        @extend %input-style;
+        background: black;
+        border-color: gray;
+        color: white;
+        &:hover,
+        &:focus {
+          border-color: white;
+        }
+      }
+    }
+
+    .formRowInput2 {
+      @extend %form-row-style;
+      width: 45%;
+
+      .inputStyle {
+        @extend %input-style;
+      }
+
+      // darkTheme
+      .darkInputStyle {
+        @extend %input-style;
+        background: black;
+        border-color: gray;
+        color: white;
+        &:hover,
+        &:focus {
+          border-color: white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .formWrap {
+    width: 99%;
+    height: 550px;
+
+    .formContainer {
+      flex-direction: column;
+
+      .selectMobile {
+        all: unset;
+        display: flex;
+        padding-bottom: 1.5rem;
+
+        .formRow {
+          width: 60%;
+        }
+      }
+
+      .inputMobile {
+        all: unset;
+        display: grid;
+        grid-gap: 1.5rem;
+        padding-bottom: 1.5rem;
+
+        #formRowMobile {
+          width: 100%;
+
+          .selectWrap {
+            width: 100%;
+          }
+        }
+
+        .formRowInput2 {
+          width: 100%;
+        }
+
+        .formRowInput {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

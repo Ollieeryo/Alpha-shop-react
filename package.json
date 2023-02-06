@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "ac-shop-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -34,5 +34,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "^2.8.3",
+    "prettier-eslint": "^15.0.1"
   }
 }

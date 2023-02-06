@@ -1,0 +1,106 @@
+.stepTitle {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+
+
+.formWrap {
+  width: 95%;
+  height: 350px;
+  
+  .formRow {
+    width: 80%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr 1fr; 
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    &:hover,&:focus-within {
+      border-color: black;
+    }
+
+    .inputWrap {
+      grid-row: 1/3;
+      display: flex;
+      align-items: center;
+
+      .input {
+        cursor: pointer;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 1px solid black;
+        border-radius: 50%;
+        
+        &:checked {
+          box-shadow: inset 0 0 0 5px black;
+        }
+  
+      }
+
+    }
+    
+
+    .label {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      
+
+      .dhl {
+        font-weight: 900;
+      }
+
+    }
+
+    .p {
+      display: flex;
+      align-items: center;
+      padding-top: 2px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+
+
+  }
+
+}
+
+// darkTheme
+#darkFormRow {
+  border-color: gray;
+  &:hover,&:focus-within {
+    border-color: white;
+  }
+
+  #darkRadio {
+    border: 1px solid darkslategray;
+    background: darkslategray;
+    &:checked {
+      background: white;
+      box-shadow: inset 0 0 0 5px darkslategray;
+    }
+  }
+
+  #darkP {
+    color: gray;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .formWrap {
+    width: 90%;
+
+    .formRow {
+      width: 100%;
+    }
+  }
+}

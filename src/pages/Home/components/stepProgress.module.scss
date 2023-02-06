@@ -1,0 +1,123 @@
+%proCircle {
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+%proInfoTitle {
+	padding-left: 0.5rem;
+	font-weight: 600;
+}
+
+
+.stepProWrap {
+	display: flex;
+	flex-flow: row wrap;
+	width: 95%;
+	margin-bottom: 2rem;
+
+	.h1 {
+		width: 100%;
+		margin-bottom: 2rem;
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	.proInfo {
+		display: flex;
+		flex-flow: row nowrap;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		height: 50px;
+
+		.alignInfo {
+			display: flex;
+			align-items: center;
+			
+
+			.proInfoTitle {
+				@extend %proInfoTitle;
+			}
+
+			.proInfoTitle2 {
+				@extend %proInfoTitle;
+				color: gray;
+			}
+
+			.proCircle {
+				@extend %proCircle;
+				border: 1px solid gray;
+				color: gray;
+			}
+
+			.proCircleBold {
+				@extend %proCircle;
+				border: 1px solid black;
+				color: black;
+			}
+
+			.proCircleBold2 {
+				@extend %proCircle;
+				border: 1px solid black;
+				color: white;
+				background: black;
+			}
+
+			// darkTheme
+			.darkProCircleBold2 {
+				@extend %proCircle;
+				border: 1px solid darkslategray;
+				color: white;
+				background: darkslategray;
+			}
+			
+			.whiteProCircle {
+				@extend %proCircle;
+				border: 1px solid white;
+				color: white;
+			}
+
+		}
+
+		.proLine {
+			height: 2px;
+			width: 3.5rem;
+			background: black;
+		}	
+
+		// darkTheme
+		.proLineDark {
+			height: 2px;
+			width: 3.5rem;
+			background: white;
+		}	
+
+		.proLineGray {
+			height: 2px;
+			width: 3.5rem;
+			background: gray;
+		}
+
+	}
+
+}
+
+@media (max-width: 576px) {
+
+	.stepProWrap {
+		width: 98%;
+	}
+	
+	.proInfoTitle {
+		display: none;
+	}
+
+	.proInfoTitle2 {
+		display: none;
+	}
+
+}
