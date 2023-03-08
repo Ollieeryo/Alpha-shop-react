@@ -1,5 +1,6 @@
 # 購物車和結帳網站-Alpha-Shop
 此專案使用 React 開發，目的功能為實現購物車、結帳相關畫面動態呈現
+Vercel 託管網站 : https://alpha-shop-react.vercel.app/
 
 # 功能-Features
 * 點擊下一步或上一步可以切換到三個不同的結帳頁面以供輸入必要資料，分別為 : 寄送地址、運送方式、付款資訊
